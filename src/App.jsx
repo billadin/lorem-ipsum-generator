@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import data from './data';
+import { nanoid } from 'nanoid';
 
 function App() {
   const [count, setCount] = useState(1);
@@ -24,7 +25,7 @@ function App() {
     <article>
       {
         text.map((item, index) =>{
-          return <p key={index}>{item}</p>
+          return <p key={nanoid()} id={nanoid(8)}>{item}</p>
         })
       }
     </article>
